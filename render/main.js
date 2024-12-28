@@ -11,7 +11,7 @@ function createWindow() {
         frame: false, // Optional: hides the window's title bar
     });
 
-    win.loadFile('index.html');
+    win.loadFile('../display/index.html');
 }
 
 app.whenReady().then(createWindow);

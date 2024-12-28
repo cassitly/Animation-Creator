@@ -107,9 +107,6 @@ function updateCameraPosition() {
     document.body.style.transform = `translate3d(${cameraPosition.x}px, ${cameraPosition.y}px, ${cameraPosition.z}px)`;
 }
 
-// Set cover image (can be changed dynamically)
-document.getElementById('cover-image').style.backgroundImage = "url('rs.jpg')";
-
 // Synchronize animations with beat
 function syncWithBeat() {
     const player = new Tone.Player(audioPlayer.src).toDestination();
