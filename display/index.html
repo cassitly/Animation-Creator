@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Editor</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #1a1a1a;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Central container for the song details */
+        #song-info-container {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            color: white;
+        }
+
+        /* Cover image styling */
+        #cover-image {
+            width: 200px;
+            height: 200px;
+            background-color: #333;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            background-size: cover;
+            background-position: center;
+            display: inline-block; /* Ensures it's treated as an inline block for centering */
+        }
+
+        /* Song name styling */
+        #song-name {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Artist name styling */
+        #artist-name {
+            font-size: 1.5rem;
+            font-weight: normal;
+            color: #bbb;
+        }
+
+        #lyrics-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 3rem;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .lyric-line {
+            display: none;
+            opacity: 0;
+        }
+
+        .animated-glow {
+            font-size: 4rem;
+            color: white;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        .particle {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+        }
+
+        #audio-player {
+            display: none; /* Hide the audio player */
+        }
+    </style>
+</head>
+<body>
+    <div id="song-info-container">
+        <div id="cover-image" style="align-content: center;"></div> <!-- Dynamic cover image -->
+        <div id="song-name" style="text-align: center;">Rise Again</div>
+        <div id="artist-name" style="text-align: center;">Casually Nyx</div>
+    </div>
+
+    <div id="lyrics-container">
+        <!-- Add the lyrics content here, for example: -->
+        <!-- Add more lyric lines as needed -->
+    </div>
+
+    <div id="particles"></div> <!-- For animated particles -->
+    
+    <audio id="audio-player" src="rs.wav" autoplay></audio> <!-- Audio file path -->
+    
+    <script src="../node_modules/animejs/lib/anime.min.js"></script>
+    <script src="../node_modules/tone/build/Tone.min.js"></script>
+    <script src="../render/renderer.js"></script>
+</body>
+</html>
